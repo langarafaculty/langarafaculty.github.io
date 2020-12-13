@@ -19,22 +19,47 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Langara Faculty Association
-email: info@langarafaculty.ca
+
+author:
+  name: Langara Faculty Association
+  email: info@langarafaculty.ca
+
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The Langara Faculty Association (LFA) is the registered agent of
+  collective bargaining for the faculty of Langara College in
+  Vancouver, BC, Canada.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: langarafaculty
-github_username:  langarafaculty
+
 
 port: 8080
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    twitter: langarafaculty
+    github:  langarafaculty
+    facebook: langarafaculty
+
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+
+header_pages:
+  - board.markdown
+  - blog/index.html
+  - social-media.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.
