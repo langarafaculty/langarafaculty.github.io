@@ -21,7 +21,7 @@
 title: Langara Faculty Association
 
 author:
-  name: Langara Faculty Association
+  name: © 2020 Langara Faculty Association
   email: info@langarafaculty.ca
 
 description: >- # this means to ignore newlines until "baseurl:"
@@ -58,8 +58,14 @@ paginate_path: "/blog/page:num/"
 
 header_pages:
   - board.markdown
+  - resources/index.markdown
+  - fpse/index.markdown
   - blog/index.html
   - social-media.html
+
+collections:
+  minutes_things:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
