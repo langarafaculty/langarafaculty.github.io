@@ -64,7 +64,7 @@ header_pages:
   - social-media.html
 
 collections:
-  minutes_things:
+  minutes_2020:
     output: true
 
 # Exclude from processing.

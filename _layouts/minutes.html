@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    <ul>
+        {% for thing in site.collections %}
+            {% if thing.label == page.category %}
+                {% assign files_by_name = thing.files | sort: "name" %}
+                {% for file in files_by_name %}
+                    <li><a href="/{{ page.category }}/{{ file.name }}">{{ file.name }}</a></li>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+  </div>
+
+</article>
